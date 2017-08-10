@@ -1,7 +1,7 @@
 const f1_data = require('./f1_2016.json');
 const f1_data_drivers = require('./f1_2016_driver.json').MRData.DriverTable.Drivers;
 
-module.exports =function(){
+module.exports =function(team_amount,players_in_team){
 
 
 
@@ -10,7 +10,7 @@ module.exports =function(){
     }
 
 
-    const players_in_team = 5;
+    // const players_in_team = 5;
 
     TeamCreator.prototype.getRandomDriverNumber = function () {
         return Math.floor(Math.random() * (f1_data_drivers.length - 1));
